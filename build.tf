@@ -7,6 +7,11 @@ terraform {
   }
 }
 
+provider "aws" {
+  region     = "us-east-1"
+  skip_credentials_validation = true
+}
+
 module "my_workerpool" {
   source = "github.com/spacelift-io/terraform-aws-spacelift-workerpool-on-ec2"
 
